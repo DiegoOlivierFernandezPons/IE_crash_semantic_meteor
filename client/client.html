@@ -1,0 +1,30 @@
+<!-- coEnzyme SAS - 2015-2016 -->
+
+<head>
+  <title>IE Crash</title>
+</head>
+
+<body>
+  {{> a_dropdown }}
+  {{> hardcoded_table h}}
+</body>
+
+<template name="a_dropdown">
+  <div class="ui multiple search selection dropdown">
+<!--    <input type="hidden"> -->
+<!--    <div class="default text">some text</div> -->
+<!--    <div class="menu"></div> -->
+  </div>
+</template>
+
+<template name="hardcoded_table">
+  <table>
+    {{#each row in rows}}
+    <tr>
+      {{#each cell in row}}
+      <td>{{cell}}</td>
+      {{/each}}
+    </tr>
+    {{/each}}
+  </table>
+</template>
