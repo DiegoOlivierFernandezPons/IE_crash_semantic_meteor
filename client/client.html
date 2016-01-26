@@ -5,26 +5,12 @@
 </head>
 
 <body>
-  {{> a_dropdown }}
-  {{> hardcoded_table h}}
-</body>
-
-<template name="a_dropdown">
-  <div class="ui multiple search selection dropdown">
-<!--    <input type="hidden"> -->
-<!--    <div class="default text">some text</div> -->
-<!--    <div class="menu"></div> -->
-  </div>
-</template>
-
-<template name="hardcoded_table">
-  <table>
-    {{#each row in rows}}
+<div class="ui selection dropdown"></div>
+<table>
+  {{#each val in values}}
     <tr>
-      {{#each cell in row}}
-      <td>{{cell}}</td>
-      {{/each}}
+      <td>{{val}}</td>
     </tr>
-    {{/each}}
-  </table>
-</template>
+  {{/each}}
+</table>
+</body>
