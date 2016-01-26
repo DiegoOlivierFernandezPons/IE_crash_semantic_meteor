@@ -7,10 +7,14 @@
 <body>
 <div class="ui selection dropdown"></div>
 <table>
+  <!--fix #1: wrap with tbody; this has to be done in the template and can't be-->
+  <!--in custom JS code that just wraps stuff after it has been rendered-->
+  <!--<tbody>-->
   {{#each val in values}}
     <tr>
       <td>{{val}}</td>
     </tr>
   {{/each}}
+  <!--</tbody>-->
 </table>
 </body>

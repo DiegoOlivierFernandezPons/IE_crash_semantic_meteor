@@ -138,6 +138,8 @@ $.fn.dropdown = function(parameters) {
         },
 
         observeChanges: function() {
+          // fix #2: just skip the code in this function
+          // return
           if('MutationObserver' in window) {
             selectObserver = new MutationObserver(function(mutations) {
               module.debug('<select> modified, recreating menu');
